@@ -1,0 +1,4 @@
+SELECT lent_apart.dong,lent_apart.deposit
+FROM lent_apart
+ORDER BY lent_apart.deposit DESC
+LIMIT 10;

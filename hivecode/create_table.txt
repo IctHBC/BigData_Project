@@ -1,0 +1,22 @@
+DROP TABLE lent_apart;
+CREATE TABLE IF NOT EXISTS lent_apart(
+  number int, 
+  build	 int,
+  year int,
+  month int,
+  day int,
+  dong string,
+  deposit string,
+  month_price double,
+  apart string,
+  size double,
+  ji_num string,
+  ji_code int,
+  floor	int
+)
+row format delimited fields terminated BY ',' lines terminated BY '\n'
+tblproperties("skip.header.line.count"="1");
+
+LOAD DATA INPATH '/user/maria_dev/Data/Dataset.csv' OVERWRITE INTO TABLE lent_apart;
+
+SELECT * FROM lent_apart LIMIT 30;
